@@ -1,0 +1,9 @@
+|-----------------------------------------------------------------------------|
+\_____________________________________________________________________________|
+clear	~  Limpian la pantalla de todo el texto                               |
+cls     ~  Limpian la pantalla de todo el texto                               |
+help	~  Help for commands(this file = .\Raiz\etc\help.me)                  |
+echo	~  repeat words after write it (echo "This Goes Here") without the "; |
+colorset~  Opens RainbowMyLife to see the color pallete to therebefore choose;|
+exit	~  Closes Yukarinsole by exit(0);                                     |
+------------------------------------------------------------------------------|
