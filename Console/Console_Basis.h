@@ -110,7 +110,7 @@ void Console::Command(){
 		}
 		if(buffer == ENTER) cout<<endl;
 		Comando = atos(&Command[0]);
-		if(atos(&Command[0]) == "echo                                                                                                                                                                                                                                             			 "){
+		if(Command[0]=='e' && Command[1]=='c'&&Command[2]=='h'&&Command[3]=='o'&&Command[4]==' '"){
 			char Word[65535];
 			cin.getline(Word,65535,'\n');
 			this->Echo(Word);
