@@ -9,7 +9,7 @@ class Console{
 			cout<<"\tSalve!\n";
 		}
 		void Help();
-		void Echo(char Word[65535]);
+		void Echo(string Word);
 		void CD();
 		void ColorSet();
 		void Exit();
@@ -67,12 +67,16 @@ void Console::ColorSet(){
 	cout<<"\n";
 }
 
-void Console::Echo(char Word[65535]){
+void Console::Echo(string Word){
 	fstream F1;
 	string f1_file = root;
+	string toBunk;
 	f1_file.append("etc\\temp\\Word.txt");
 	F1.open(f1_file.c_str(),ios::in | ios::out | ios::trunc);
-	
+	F1<<Word;  //sends Word to the file after deleted last content
+	while(getline(F1,toBunk)){
+		cout<<toBunk<<"\n";
+	}
 }
 
 void Console::Exit(){
@@ -109,7 +113,6 @@ void Console::Command(){
 			cout<<buffer;
 		}
 		if(buffer == ENTER) cout<<endl;
-		Comando = atos(&Command[0]);
 		if(Command[0]=='e' && Command[1]=='c'&&Command[2]=='h'&&Command[3]=='o'&&Command[4]==' '"){
 			char Word[65535];
 			cin.getline(Word,65535,'\n');
